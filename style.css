@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+img {
+  transform: scale(0.5);
+  position: absolute;
+  transform-origin: left top;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #000;
+}
+
+#tree1,
+#tree3,
+#tree5 {
+  animation: tree 11s linear infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#tree2,
+#tree4,
+#tree6 {
+  animation: tree2 6.5s linear infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes tree {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  to {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes tree2 {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  to {
+    transform: scale(1.04);
+  }
+}
+
+#cloud1 {
+  position: relative;
+  animation: cloud1 12s ease infinite alternate;
+}
+
+#cloud2 {
+  position: relative;
+  animation: cloud2 10s ease infinite alternate;
+}
+
+@keyframes cloud1 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-10%, 0);
+  }
+}
+
+@keyframes cloud2 {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(10%, 0);
+  }
+}
